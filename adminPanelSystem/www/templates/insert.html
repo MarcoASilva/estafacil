@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>EstaFacil Admin Panel</title>
+<link href="css/Untitled1.css" rel="stylesheet">
+<link href="css/page1.css" rel="stylesheet">
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/wb.stickylayer.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/services.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#Layer1").stickylayer({orientation: 1, position: [0, 0], delay: 0});
+});
+</script>
+</head>
+<body>
+<div id="container">
+<input ng-model="form.nome" tabindex="1" type="text" id="Editbox1" style="color : black; position:absolute;left:77px;top:146px;width:259px;height:24px;line-height:24px;z-index:4;" name="Editbox1" value="">
+<input ng-model="form.submit" tabindex="16" type="submit" ng-click="enviar()" id="Button1" name="" value="Submit" style="position:absolute;left:376px;top:800px;width:164px;height:50px;z-index:99;">
+<input ng-model="form.end" tabindex="2" type="text" id="Editbox2" style="color : black; position:absolute;left:77px;top:219px;width:259px;height:24px;line-height:24px;z-index:5;" name="Editbox1" value="">
+<input ng-model="form.bairro" tabindex="3" type="text" id="Editbox3" style="color : black; position:absolute;left:77px;top:292px;width:259px;height:24px;line-height:24px;z-index:6;" name="Editbox1" value="">
+<input ng-model="form.cidade" tabindex="4" type="text" id="Editbox4" style="color : black; position:absolute;left:77px;top:365px;width:187px;height:24px;line-height:24px;z-index:7;" name="Editbox1" value="">
+<input ng-model="form.cep" tabindex="6" type="text" maxlength="20" id="Editbox5" style="color : black; position:absolute;left:77px;top:440px;width:259px;height:24px;line-height:24px;z-index:9;" name="Editbox1" placeholder="00000-000">
+<input ng-model="form.tel" tabindex="7" type="text" maxlength="20" id="Editbox6" style="color : black; position:absolute;left:77px;top:514px;width:259px;height:24px;line-height:24px;z-index:10;" name="Editbox1">
+<input ng-model="form.responsavel" tabindex="12"  type="text" id="Editbox9" style="color : black; position:absolute;left:572px;top:292px;width:259px;height:24px;line-height:24px;z-index:15;" name="Editbox1" value="">
+<input ng-model="form.cargo" tabindex="13" type="text" id="Editbox10" style="color : black; position:absolute;left:572px;top:365px;width:259px;height:24px;line-height:24px;z-index:16;" name="Editbox1">
+<input ng-model="form.email" tabindex="14" type="text" id="Editbox11" style="color : black; position:absolute;left:572px;top:440px;width:259px;height:24px;line-height:24px;z-index:17;" name="Editbox1">
+<input ng-model="form.telresp" tabindex="15" type="text" maxlength="20" id="Editbox12" style="color : black; position:absolute;left:572px;top:514px;width:259px;height:24px;line-height:24px;z-index:18;" name="Editbox1" value="">
+<div id="wb_Text1" style="position:absolute;left:77px;top:124px;width:250px;height:22px;;text-align:left;">
+<span style="color:#D3D3D3;font-family:'Trebuchet MS';font-size:16px;">Nome</span></div>
+<div id="wb_Text6" style="position:absolute;left:77px;top:197px;width:250px;height:22px;text-align:left;">
+<span style="color:#D3D3D3;font-family:'Trebuchet MS';font-size:16px;">Endereço</span></div>
+<div id="wb_Text7" style="position:absolute;left:77px;top:270px;width:250px;height:22px;text-align:left;">
+<span style="color:#D3D3D3;font-family:'Trebuchet MS';font-size:16px;">Bairro</span></div>
+<div id="wb_Text8" style="position:absolute;left:77px;top:343px;width:160px;height:22px;text-align:left;">
+<span style="color:#D3D3D3;font-family:'Trebuchet MS';font-size:16px;">Cidade</span></div>
+<div id="wb_Text9" style="position:absolute;left:77px;top:418px;width:250px;height:22px;text-align:left;">
+<span style="color:#D3D3D3;font-family:'Trebuchet MS';font-size:16px;">CEP</span></div>
+<div id="wb_Text10" style="position:absolute;left:77px;top:492px;width:250px;height:22px;z-index:20;text-align:left;">
+<span style="color:#D3D3D3;font-family:'Trebuchet MS';font-size:16px;">Telefone</span></div>
+<div id="wb_Text11" style="position:absolute;left:572px;top:124px;width:250px;height:22px;z-index:21;text-align:left;">
+<span style="color:#D3D3D3;font-family:'Trebuchet MS';font-size:16px;">Possui :</span></div>
+<div id="wb_Text13" style="position:absolute;left:572px;top:270px;width:250px;height:22px;z-index:22;text-align:left;">
+<span style="color:#D3D3D3;font-family:'Trebuchet MS';font-size:16px;">Responsável</span></div>
+<div id="wb_Text14" style="position:absolute;left:572px;top:343px;width:250px;height:22px;z-index:23;text-align:left;">
+<span style="color:#D3D3D3;font-family:'Trebuchet MS';font-size:16px;">Cargo</span></div>
+<div id="wb_Text15" style="position:absolute;left:572px;top:418px;width:250px;height:22px;z-index:24;text-align:left;">
+<span style="color:#D3D3D3;font-family:'Trebuchet MS';font-size:16px;">Email</span></div>
+<div id="wb_Text16" style="position:absolute;left:572px;top:492px;width:250px;height:22px;z-index:25;text-align:left;">
+<span style="color:#D3D3D3;font-family:'Trebuchet MS';font-size:16px;">telefone</span></div>
+<div id="wb_Text17" style="position:absolute;left:279px;top:343px;width:59px;height:22px;text-align:center;z-index:26;">
+<span style="color:#D3D3D3;font-family:'Trebuchet MS';font-size:16px;">Estado</span></div>
+<input ng-model="form.estado" tabindex="5"  maxlength="2" type="text" id="Editbox13" style="color: black; text-transform:uppercase; position:absolute;left:279px;top:365px;width:57px;height:24px;line-height:24px;z-index:8;" name="Editbox1" value="">
+<input ng-model="form.options.estacprop" checked ="unchecked"  tabindex="8" type="checkbox" id="Checkbox1" name="checkConv" value="on" style="position:absolute;left:653px;top:122px;z-index:28;">
+<input ng-model="form.options.conveniado" checked ="unchecked" tabindex="10" type="checkbox" id="Checkbox2" name="" value="on" style="position:absolute;left:653px;top:195px;z-index:51;">
+<input ng-model="form.options.valet" checked ="unchecked" tabindex="9" type="checkbox" id="Checkbox3" name="" value="on" style="position:absolute;left:653px;top:158px;z-index: 52;">
+<input ng-model="form.options.fake" checked="checked" type="checkbox" style="display : none;">
+<div id="wb_Text18" style="position:absolute;left:682px;top:120px;width:252px;height:22px;z-index:31;text-align:left;">
+<span style="color:#C0C0C0;font-family:'Trebuchet MS';font-size:16px;">Estacionamento Próprio</span></div>
+<div id="wb_Text19" style="position:absolute;left:682px;top:156px;width:246px;height:22px;z-index:32;text-align:left;">
+<span style="color:#C0C0C0;font-family:'Trebuchet MS';font-size:16px;">Valet</span></div>
+<div id="wb_Text20" style="position:absolute;left:682px;top:193px;width:253px;height:22px;z-index:33;text-align:left;">
+<span style="color:#C0C0C0;font-family:'Trebuchet MS';font-size:16px;">Estacionamento Conveniado</span></div>
+<input ng-model="form.options.estacperto" tabindex="11" type="checkbox" id="Checkbox4" name="" value="on" style="color : black; position:absolute;left:653px;top:233px;z-index:14;">
+<div id="wb_Text12" style="position:absolute;left:682px;top:231px;width:253px;height:22px;z-index:35;text-align:left;">
+<span style="color:#C0C0C0;font-family:'Trebuchet MS';font-size:16px;">Estacionamento Perto</span></div>
+</div>
+<div id="Layer1" style="position:absolute;text-align:center;left:1px;top:1px;width:100%;height:97px;z-index:36;">
+<div id="Layer1_Container" style="width:975px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="wb_Text3" style="position:absolute;left:362px;top:40px;width:250px;height:27px;text-align:center;z-index:0;">
+<span style="color:#C0C0C0;font-family:'Trebuchet MS';font-size:21px;">Administrator Panel</span></div>
+<div id="wb_Text2" style="position:absolute;left:48px;top:27px;width:152px;height:40px;text-align:center;z-index:1;">
+<span style="color:#F5F5F5;font-family:'Trebuchet MS';font-size:32px;">EstaFácil</span></div>
+<div id="wb_Text5" style="text-align: right; position:absolute;left:892px;top:27px;width:50px;height:24px;text-align:right;z-index:2;">
+<span style="color:#DCDCDC;font-family:'Trebuchet MS';font-size:16px;">{{sobrenome}}, </span><span style="float : right;color:#DCDCDC;font-family:'Trebuchet MS';font-size:19px;">{{primeiroNome}}</span></div>
+<div id="wb_Text4" style="position:absolute;left:860px;top:0px;width:121px;height:22px;text-align:right;z-index:3;">
+<span style="color:#C0C0C0;font-family:'Trebuchet MS';font-size:16px;">Logged in as :</span></div>
+</div>
+</div>
+<div style="position:absolute;left:250px;top:599px;width:800px;">
+    <h3 style="color : white"> Categorias : </h3> 
+    <input checked="checked" style="display : none;" ng-model="form.categs.fake" type="checkbox">
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 19" ng-model="form.categs.gast" type="checkbox"><span style="font-size : 20px;">Baixa Gastronomia
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 60" ng-model="form.categs.bala" type="checkbox">Balada 
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 61" ng-model="form.categs.barr" type="checkbox">Bar-Restaurante
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 62" ng-model="form.categs.bote" type="checkbox">Boteco
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 63" ng-model="form.categs.cach" type="checkbox">Cachassaria
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 264" ng-model="form.categs.cerv" type="checkbox">Cervejaria
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 65" ng-model="form.categs.chop" type="checkbox">Chop/Cerveja
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 66" ng-model="form.categs.feij" type="checkbox">Feijoada
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 69" ng-model="form.categs.happ" type="checkbox">Happy Hour
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 70" ng-model="form.categs.kara" type="checkbox">Karaokê
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 71" ng-model="form.categs.lgbt" type="checkbox">LGBT
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 20" ng-model="form.categs.musi" type="checkbox">Música ao vivo
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 20" ng-model="form.categs.sinu" type="checkbox">Sinuca
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 20" ng-model="form.categs.fute" type="checkbox">Futebol
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 20" ng-model="form.categs.ufc" type="checkbox">UFC
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 20" ng-model="form.categs.pub" type="checkbox">Pubs
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 20" ng-model="form.categs.samb" type="checkbox">Samba
+    <input style="height : 20px; width: 20px;margin-left: 10px;" checked ="unchecked" style="z-index : 20" ng-model="form.categs.sand" type="checkbox">Sanduiches
+    <input style="height : 20px; width: 20px;margin-left: 10px;" style="z-index : 20" ng-model="form.categs.sert" type="checkbox">Sertanejo</span>
+</div>
+
+<div ng-show="erro" class="alert alert-danger" style="position:absolute;left:250px;top:700px;width:800px;">
+  <strong>Erro</strong> Houve um erro na inserção do estabelecimento, por favor tente novamente ou contate o Administrador
+</div>
+
+<div ng-show="sucesso" class="alert alert-success" style="position:absolute;left:250px;top:700px;width:800px;">
+  <strong>Sucesso</strong> Estabelecimento inserido com sucesso !
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>EstaFácil Login</title>
+<link href="css/Untitled1.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:300px;top:71px;width:407px;height:37px;text-align:center;z-index:0;">
+<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:29px;">EstaFácil Administrator Panel</span></div>
+<input ng-model="inputUser" type="text" id="inputUser" style="position:absolute;left:454px;top:237px;width:179px;height:19px;line-height:19px;z-index:1;" name="inputUser" value="" tabindex="1">
+<div id="wb_Text2" style="position:absolute;left:354px;top:159px;width:296px;height:22px;text-align:center;z-index:2;">
+<span style="color:#C0C0C0;font-family:'Trebuchet MS';font-size:16px;">Entre com suas credencias EstaFácil</span></div>
+<div id="wb_Text3" style="position:absolute;left:344px;top:238px;width:110px;height:20px;text-align:center;z-index:3;">
+<span style="color:#C0C0C0;font-family:'Trebuchet MS';font-size:15px;">Usuário : </span></div>
+<div id="wb_Text4" style="position:absolute;left:344px;top:280px;width:110px;height:20px;text-align:center;z-index:4;">
+<span style="color:#C0C0C0;font-family:'Trebuchet MS';font-size:15px;">Senha : </span></div>
+<p style="position:absolute;left:454px;top:298px;width:179px;height:19px;line-height:19px;z-index:20;color : red">{{alerta}}</p>
+<input ng-model="inputSenha" type="password" id="inputSenha" style="position:absolute;left:454px;top:281px;width:179px;height:19px;line-height:19px;z-index:5;" name="inputSenha" value="" tabindex="2">
+<input ng-click="login(inputUser, inputSenha)" type="button" id="btnSubmit" name="" value="Entrar" style="position:absolute;left:454px;top:336px;width:96px;height:25px;z-index:6;" tabindex="3">
+</div>
+</body>
